@@ -19,24 +19,35 @@ const batteryStatus = select('.status');
 const networkStatus = select('.network');
 const networkColor = select('.box-three');
 
-// OS of SYSTEM
-
+// Information of SYSTEM- OS
 function getOS() {
     const userAgent = navigator.userAgent;
-    let os = "Unknown OS";
+    let os;
+    let osDetected = true;
 
-    if (userAgent.indexOf("Win") !== -1) os = "Windows";
-    if (userAgent.indexOf("Mac") !== -1) os = "MacOS";
-    if (userAgent.indexOf("Android") !== -1) os = "Android";
-    if (userAgent.indexOf("like Mac") !== -1) os = "iOS";
-
+    switch (osDetected) {
+        case userAgent.indexOf("Win") !== -1:
+            os = "Windows";
+            break;
+        case userAgent.indexOf("Mac") !== -1:
+            os = "MacOS";
+            break;
+        case userAgent.indexOf("Android") !== -1:
+            os = "Android";
+            break;
+        case userAgent.indexOf("like Mac") !== -1:
+            os = "iOS";
+            break;
+        default:
+            os = "Unknown OS"; 
+    }
     return os;
 }
 
 userOs.innerText = `OS: ${getOS()}`;
 
 
-// Language of SYSTEM
+// Information of SYSTEM- language
 
 function getLanguage() {
     return navigator.language || navigator.userLanguage;
@@ -44,8 +55,7 @@ function getLanguage() {
 
 userLanguage.innerText = `Language: ${getLanguage()}`;
 
-// Browser of SYSTEM
-
+// Information of SYSTEM- browser
 function getBrowser() {
     const userAgent = navigator.userAgent;
     let browser = "Unknown Browser";
@@ -61,7 +71,6 @@ function getBrowser() {
 userBrowser.innerText = `Browser: ${getBrowser()}`;
 
 // Information of WINDOW
-
 function readWindow() {
     pageWidth.innerText = `Width: ${window.innerWidth}px`;
     pageHeight.innerText = `Height: ${window.innerHeight}px`;
@@ -101,8 +110,8 @@ if (navigator.getBattery) {
         });
     });
 } else {
-    batteryLevel.innerText = "not available";
-    batteryStatus.innerText = "not available";
+    batteryLevel.innerText = "Level: not available";
+    batteryStatus.innerText = "Status: not available";
 }
 
 // Information of NETWORK
