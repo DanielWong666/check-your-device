@@ -1,0 +1,98 @@
+:root {
+    --app-dark-background: #27232b;
+    --app-light-background: #efedf5;
+}
+  
+body {
+    background-color: var(--app-light-background);
+    place-items: center;
+    display: grid;
+}
+
+/*--------------------------------------------*/
+/*Utility classes                             */
+/*--------------------------------------------*/
+
+.container {
+    width: min(100% - 30px, 1200px);
+    margin-inline: auto;
+}
+
+.grid {
+    display: grid;
+    place-items: center;
+}
+
+/*--------------------------------------------*/
+/*Main                                        */
+/*--------------------------------------------*/
+
+h1 {
+    color: var(--app-light-background);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+h2 {
+    color: var(--app-dark-background);
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 20px;
+}
+
+.box {
+    margin-top: 20px;
+}
+
+.box-one {
+    width: 400px;
+    height: 50px;
+    background-color: var(--app-dark-background);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.box-two {
+    width: 400px;
+    height: 100px;
+    border: 1px solid var(--app-dark-background);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: grid;
+    align-items: center;
+}
+
+.box-three {
+    width: 400px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.box-four {
+    width: 400px;
+    height: 66px;
+    border: 1px solid var(--app-dark-background);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: grid;
+    align-items: center;
+}
+
+/*--------------------------------------------*/
+/*Media screen                                */
+/*--------------------------------------------*/
+
+@media screen and (max-width:768px) {
+    .box {
+        width: 100%;
+    }
+}
+  
+@media screen and (max-width:480px) {
+    .box {
+        width: 100%;
+    }
+}

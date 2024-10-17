@@ -6,51 +6,52 @@
     <meta name="author" content="Duan Wang">
     <meta name="description" content="My web project">
     <meta name="keyword" content="html, css, web, seo, web development">
-    <title>Converter</title>
+    <title>Let me check your device!</title>
     <link rel="icon" href="./asserts/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
-    <link rel="stylesheet" href="./asserts/css/style.css" media="all">
+    <link rel="stylesheet" href="./assets/css/style.css" media="all">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" >
-    <script src="./asserts/js/index.js" defer></script>
+    <script src="./assets/js/index.js" defer></script>
   </head>
-  <body class="theme">
-    <header>
-      <div class="container flex space">
-        <h1>CONVERTER</h1>
-        <div class="nav-bar flex">
-            <a href="#">Projects</a>
-            <a href="#">About me</a>
-            <a href="#">Contact</a>    
+  <body>
+    <main class="container grid">
+      <section class="box">
+        <div class="box-one">
+          <h1>SYSTEM</h1>
         </div>
-      </div>
-    </header>
-    <main class="container">
-       <h2 class="title">Temperature converter</h2>
-       <form class="">
-          <div class="input flex">
-            <input class="input-box" type="text" placeholder="Plese type in a number">
-            <input class="input-button calculate" type="submit" value="Convert">
-          </div>
-          <div class="choice flex">
-            <div>
-                <input type="radio" name="conversion" value="toFah">
-                <label for="toFah">To Fahrenheit</label>
-            </div>
-            <div>
-                <input type="radio" name="conversion" value="toCel">
-                <label for="toCel">To Celsius</label>
-            </div>
-          </div>
-          <div class="output">
-            <input type="text" id="output" 
-            placeholder="Result will appear here" 
-            readonly>
-          </div>
-       </form>
-       <button class="change">Dark mode</button>
+        <div class="box-two">
+          <h2 class="os"></h2>
+          <h2 class="language"></h2>
+          <h2 class="browser"></h2>
+        </div>
+      </section>
+      <section class="box">
+        <div class="box-one">
+          <h1>WINDOW</h1>
+        </div>
+        <div class="box-two">
+          <h2 class="width"></h2>
+          <h2 class="height"></h2>
+          <h2 class="orientation"></h2>
+        </div>
+      </section>
+      <section class="box">
+        <div class="box-one">
+          <h1>BATTERY</h1>
+        </div>
+        <div class="box-four">
+          <h2 class="level"></h2>
+          <h2 class="status"></h2>
+        </div>
+      </section>
+      <section class="box">
+        <div class="box-three">
+          <h1 class="network"></h1>
+        </div>
+      </section>
     </main>
   </body>
 </html>
